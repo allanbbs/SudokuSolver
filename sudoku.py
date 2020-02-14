@@ -4,6 +4,7 @@ import pygame
 import sys
 import solver
 import drawer
+import time
 #############################################################
 grid =  [					#################################
 [4, 0, 0, 0, 0, 5, 0, 0, 0],#################################
@@ -53,7 +54,10 @@ drawer.grid = grid
 				x_t = 7
 			pygame.draw.line(window, (0,0,0), ((x+1)*80, 0), ((x+1)*80, height),x_t)
 	pygame.display.flip()'''
+start = time.time()
 solver.solve()
+end = time.time()
+print(end-start)
 	
 
 
